@@ -1,0 +1,47 @@
+name: "📝 문서 — 설명서·가이드를 쓰거나 고친다"
+description: 코드는 그대로, 문서만 바뀐다 (담당 = 문서담당)
+title: "docs: "
+labels: ["type:docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        코드 변경에 딸린 문서 수정은 그 기능 이슈에서 코더가 함께 합니다. **문서만** 바꿀 때 이 양식을 씁니다.
+
+  - type: textarea
+    id: target
+    attributes:
+      label: 어떤 문서를
+      description: 파일 경로나 문서 이름. 새로 만드는 것이면 "신규"라고 적고 어디에 둘지.
+      placeholder: "docs/가이드/배포-런북.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: 무엇을 반영해야 하나
+      description: 낡은 내용·빠진 절차·잘못된 설명 등. 실제와 어떻게 다른지 적어 주면 좋습니다.
+      placeholder: "런북의 '현재 운영 버전'이 0071로 적혀 있는데 실제는 0129다. 매번 낡으니 번호 대신 확인 명령을 적자."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - "P2 — 순서대로"
+        - "P1 — 잘못된 문서가 사고를 부르고 있다"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: check
+    attributes:
+      label: 확인
+      options:
+        - label: 사용자 대면 문서는 HTML(모바일·다크·인쇄), 기계가 읽는 문서(README·CHANGELOG)는 마크다운 — 어느 쪽인지 압니다
+          required: true
+        - label: 금액·개인정보·원가 같은 민감정보를 본문에 넣지 않았습니다
+          required: true
