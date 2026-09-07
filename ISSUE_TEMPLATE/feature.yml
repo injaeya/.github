@@ -1,0 +1,76 @@
+name: "✨ 기능 — 새로 만들거나 바꾸고 싶다"
+description: 없던 기능을 추가하거나, 있는 기능의 동작을 바꾼다
+title: "feat: "
+labels: ["type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **이 양식의 목적** — "무엇이 되면 끝인가"를 미리 정합니다. 그래야 코더는 추측하지 않고, 리뷰어는 무엇과 대조할지 알며, QA는 통과 기준을 갖습니다.
+        가장 중요한 칸은 **수용 기준**입니다. 이 칸이 비면 이슈는 착수되지 않습니다(전역 규칙 §7-3).
+
+  - type: textarea
+    id: why
+    attributes:
+      label: 왜 필요한가 (배경)
+      description: 지금 무엇이 불편한지, 누가 쓰는지. 기능 설명이 아니라 "문제"를 적어 주세요.
+      placeholder: "영업팀이 견적을 낼 때마다 거래처 주소를 엑셀에서 찾아 복사한다. 하루 20번 이상."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 원하는 동작
+      description: 사용자 입장에서 "이렇게 되면 좋겠다"를 화면 순서대로. 기술 용어 없이 써도 됩니다.
+      placeholder: "거래처를 고르면 주소가 자동으로 채워지고, 필요하면 고칠 수 있다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 수용 기준 — 무엇이 되면 끝인가
+      description: 확인 가능한 문장으로, 한 줄에 하나씩. 코더·리뷰어·QA가 전부 이 목록으로 판정합니다.
+      placeholder: |
+        - [ ] 거래처 선택 시 주소 칸이 자동으로 채워진다
+        - [ ] 자동 채움 뒤에도 주소를 직접 수정할 수 있다
+        - [ ] 주소가 없는 거래처는 빈칸으로 두고 오류를 내지 않는다
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 범위 밖
+      description: 이번에 하지 않을 것. 적어 두면 "이것도 같이 해 주지"가 생기지 않습니다.
+      placeholder: "지도 표시·거리 계산은 이번 범위 밖"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      description: P1 = 이번 출시에 반드시 · P2 = 계획에 넣어 순서대로 · P3 = 있으면 좋은 것(등록하지 말고 누적 이슈에 코멘트)
+      options:
+        - "P2 — 계획에 넣어 순서대로"
+        - "P1 — 이번 출시에 반드시 들어가야 한다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: verify
+    attributes:
+      label: 어떻게 확인할 수 있나 (선택)
+      description: 완성됐을 때 눈으로 확인하는 방법. 화면 경로나 시나리오. 모르면 비워 두세요 — 리더가 정합니다.
+
+  - type: checkboxes
+    id: check
+    attributes:
+      label: 착수 전 확인
+      options:
+        - label: 비슷한 요청이 이미 등록되어 있는지 검색했습니다
+          required: true
+        - label: 사람이 먼저 결정해야 할 것이 없습니다 — 있으면 "결정 요청" 양식으로 먼저 올렸습니다
+          required: true
+        - label: 금액·개인정보·원가 같은 민감정보를 본문에 넣지 않았습니다
+          required: true
