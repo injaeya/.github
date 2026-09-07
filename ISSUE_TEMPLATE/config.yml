@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📘 규칙이 궁금할 때
+    url: https://github.com/injaeya/.github/blob/main/CONTRIBUTING.md
+    about: 브랜치·이슈·PR·역할 규칙 요약. 전체 규칙서는 리더 세션에 물어보세요.
