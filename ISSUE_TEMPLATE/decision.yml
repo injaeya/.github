@@ -1,0 +1,43 @@
+name: "🤔 결정 요청 — 사용자가 정해야 할 갈림길"
+description: 구현 중 선택지가 갈려 사용자 결정이 필요하다 (코더·리더가 올림)
+title: "decision: "
+labels: ["type:decision", "status:blocked"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **이 양식의 목적** — 추측으로 정하지 않기 위해서입니다. 결정은 사용자의 몫이고, 여기엔 **선택지와 근거까지만** 적습니다.
+        이 이슈가 열려 있는 동안 관련 작업은 멈춥니다(`status:blocked`). 결정이 나면 결정 내용을 코멘트로 남기고 닫습니다.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 정해야 할 질문
+      description: 한 문장으로. "A로 갈까요, B로 갈까요?"
+      placeholder: "견적 PDF에 할인율을 표시할까요, 최종 금액만 표시할까요?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: 선택지와 각각의 장단점
+      description: 같은 깊이로 적습니다. 권고가 있으면 맨 앞에 "(권장)"을 붙이되, 근거를 함께.
+      placeholder: |
+        **A (권장) 최종 금액만** — 장점: 협상 여지 유지 · 단점: 고객이 할인 여부를 못 봄
+        **B 할인율 표시** — 장점: 투명 · 단점: 다음 협상의 기준선이 됨
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 결정이 늦어지면 무엇이 막히나
+      description: 어느 이슈·PR이 이 결정을 기다리는지.
+      placeholder: "#142 견적 PDF 개선이 이 결정 전엔 착수 불가"
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 결정 희망 기한 (선택)
+      placeholder: "2026-09-14"
