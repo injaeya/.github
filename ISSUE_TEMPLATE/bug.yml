@@ -1,0 +1,72 @@
+name: "🐛 버그 — 되던 것이 안 된다"
+description: 예전엔 되던 기능이 지금 안 되거나, 잘못 동작한다
+title: "fix: "
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **이 양식의 목적** — 코더가 이 글만 읽고 바로 착수할 수 있어야 합니다.
+        아래 다섯 칸이 채워져야 "착수 조건"이 됩니다(전역 규칙 §7-3). 모르는 칸은 비워 두지 말고 "모름"이라고 적어 주세요 — 그러면 리더가 조사관에게 확인을 맡깁니다.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 무슨 일이 일어나나
+      description: 어느 화면에서, 무엇을 하면, 무엇이 잘못되나. 스크린샷이 있으면 붙여넣기.
+      placeholder: "견적서 화면에서 [저장]을 누르면 '저장 실패'라고 뜨고 아무것도 저장되지 않는다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 절차
+      description: 다른 사람이 똑같이 따라 하면 같은 문제가 나야 합니다. 번호를 붙여 순서대로.
+      placeholder: |
+        1. 로그인 (영업팀 계정)
+        2. 영업 → 견적 → 새 견적
+        3. 거래처 선택 후 [저장]
+        4. → '저장 실패' 표시
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 원래는 어떻게 되어야 하나
+      description: 정상일 때의 동작. "이렇게 되면 고쳐진 것이다"의 기준이 됩니다.
+      placeholder: "저장되고 견적 목록에 새 행이 보여야 한다"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 얼마나 급한가
+      description: P0 = 지금 운영이 멈춤(핫픽스) · P1 = 핵심 기능 불가, 우회 없음 · P2 = 불편하지만 우회 가능 · P3 = 개선 (P3는 등록하지 말고 누적 이슈에 코멘트로)
+      options:
+        - "P2 — 불편하지만 우회할 수 있다"
+        - "P1 — 핵심 기능을 못 쓴다, 우회 방법이 없다"
+        - "P0 — 운영이 지금 멈췄다 / 데이터가 깨진다 / 결제가 안 된다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 범위 밖 (선택)
+      description: 이 이슈에서 "손대지 말아야 할 것"이 있으면 적어 주세요. 코더가 옆의 것을 같이 고치는 것을 막습니다.
+      placeholder: "견적 PDF 출력은 이 이슈와 무관 — 건드리지 않는다"
+
+  - type: checkboxes
+    id: precondition
+    attributes:
+      label: 착수 전 확인
+      options:
+        - label: 같은 문제가 이미 등록되어 있는지 검색했습니다
+          required: true
+        - label: 사람이 먼저 해야 할 일(실기기 확인·외부 승인·운영 배포 등)이 없습니다 — 있으면 위 본문에 적었습니다
+          required: true
+        - label: 금액·개인정보·원가 같은 민감정보를 본문에 넣지 않았습니다
+          required: true
