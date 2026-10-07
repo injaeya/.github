@@ -1,7 +1,7 @@
 # 일하는 방식 — 한 장 요약
 
 > 이 저장소(`.github`)의 양식은 **자기 양식이 없는 모든 저장소에 자동 적용**됩니다.
-> 저장소에 같은 이름의 파일을 두면 그쪽이 우선합니다(덧붙이기가 아니라 바꿔치기 — 그래서 여기 것을 복사해 고치세요).
+> 저장소에 자기 양식을 두면 그쪽이 우선합니다(덧붙이기가 아니라 바꿔치기 — 그래서 여기 것을 복사해 고치세요). 단 **이슈 양식은 폴더 통째로** 대체됩니다 — 저장소의 `.github/ISSUE_TEMPLATE/` 에 파일이 하나라도 있으면 공통 이슈 양식은 전부 안 쓰입니다. PR 양식 등 나머지는 같은 이름의 파일 단위입니다. 자세히는 [README](README.md#저장소별로-다르게-쓰고-싶으면) · [GitHub 문서](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
 > 전체 규칙의 정본은 리더 세션이 들고 있는 전역 규칙 §7입니다. 여기엔 매일 쓰는 것만 적습니다.
 
 ## 1. 다섯 가지 원칙 (예외 없음)
