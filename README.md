@@ -6,7 +6,7 @@
 |---|---|
 | `.github/ISSUE_TEMPLATE/bug.yml` · `feature.yml` · `docs.yml` · `decision.yml` | 이슈를 만들 때 고르는 양식 4종 |
 | `.github/ISSUE_TEMPLATE/config.yml` | 빈 이슈 금지, 규칙 링크 |
-| `PULL_REQUEST_TEMPLATE.md` | PR 본문 기본 양식(다섯 칸 + 티어) |
+| `PULL_REQUEST_TEMPLATE.md` | PR 본문 기본 양식(다섯 칸 + 티어) + 해당할 때만 채우는 🔒 보안 점검 · ♻️ 리팩터 섹션 |
 | `CONTRIBUTING.md` | 일하는 방식 한 장 요약 |
 
 ## 저장소별로 다르게 쓰고 싶으면
