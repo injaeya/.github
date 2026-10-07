@@ -4,8 +4,8 @@
 
 | 파일 | 역할 |
 |---|---|
-| `ISSUE_TEMPLATE/bug.yml` · `feature.yml` · `docs.yml` · `decision.yml` | 이슈를 만들 때 고르는 양식 4종 |
-| `ISSUE_TEMPLATE/config.yml` | 빈 이슈 금지, 규칙 링크 |
+| `.github/ISSUE_TEMPLATE/bug.yml` · `feature.yml` · `docs.yml` · `decision.yml` | 이슈를 만들 때 고르는 양식 4종 |
+| `.github/ISSUE_TEMPLATE/config.yml` | 빈 이슈 금지, 규칙 링크 |
 | `PULL_REQUEST_TEMPLATE.md` | PR 본문 기본 양식(다섯 칸 + 티어) |
 | `CONTRIBUTING.md` | 일하는 방식 한 장 요약 |
 
